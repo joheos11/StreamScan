@@ -1,0 +1,45 @@
+name: StreamScan
+
+# 1. El "Disparador" (Trigger)
+on:
+  schedule:
+    # Esto es sintaxis CRON. Significa: "En el minuto 0, cada 12 horas"
+    - cron: '0 */12 * * *'
+  # También permitimos ejecutarlo manualmente desde la web (botón mágico) para probar
+  workflow_dispatch:
+
+# Permisos necesarios para que el bot pueda guardar cambios en el repo
+permissions:
+  contents: write
+
+# 2. El "Trabajo" (Job)
+jobs:
+  descargar-y-actualizar:
+    runs-on: ubuntu-latest # Usamos una máquina virtual Linux gratuita
+
+    steps:
+      # Paso A: Descargar tu repositorio actual en la máquina virtual
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      # Paso B: Descargar la lista externa
+      - name: Descargar lista plana
+        run: |
+          # Usamos curl para descargar y guardar como 'mi-lista.txt'
+          curl -o lista_importada.txt https://ipfs.io/ipns/k2k4r8oqlcjxsritt5mczkcn4mmvcmymbqw7113fz2flkrerfwfps004/data/listas/listaplana.txt
+
+      # Paso C: Comprobar cambios y hacer Commit & Push
+      - name: Guardar cambios
+        run: |
+          # Configuramos un usuario "fantasma" para el commit
+          git config --global user.name 'GitHub Action Bot'
+          git config --global user.email 'action@github.com'
+          
+          # Añadimos el archivo
+          git add lista_importada.txt
+          
+          # Intentamos hacer commit. Si no hay cambios (la lista es igual), no da error.
+          git commit -m "Auto-actualización de la lista plana" || echo "No hay cambios para actualizar"
+          
+          # Subimos los cambios al repo
+          git push
