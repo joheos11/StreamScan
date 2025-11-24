@@ -2,8 +2,6 @@
 
 **StreamScan** es una herramienta de software de código abierto diseñada con el único propósito de automatizar la validación técnica y la comprobación del estado de los enlaces de listas de canales (M3U, IPTV, etc.).
 
-## Puntos Clave Importantes:
-
 1.  **Sin Alojamiento de Contenido:** **StreamScan** NO aloja, distribuye, retransmite ni proporciona acceso a ningún contenido multimedia, canal de televisión o flujo de vídeo. Es simplemente una utilidad de prueba de enlaces.
 2.  **Responsabilidad del Usuario:** El usuario de esta herramienta es el único y exclusivo responsable de la legalidad de las listas de canales que utiliza. Es su deber verificar que tiene los permisos o licencias necesarios para acceder, usar y procesar dicho contenido en su jurisdicción local.
 3.  **Uso No Comercial Restringido:** El autor de esta herramienta no busca ni obtiene ningún beneficio económico de ella. Se prohíbe estrictamente el uso comercial de **StreamScan** o cualquier trabajo derivado sin un permiso explícito por escrito de [TU NOMBRE/USUARIO].
