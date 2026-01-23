@@ -1,1 +1,1 @@
-Unable to retrieve content within timeout period: found 3 provider(s), attempted 3, but none were reachable (phase: connecting to providers, peers: 12D3KooWQRJjSfnMNDBc9HM6dwMcFUBhsXwcUjHK2hk483ochCND)
+Unable to retrieve content within timeout period: found 3 provider(s), connected to 1, but they did not return the requested content (phase: connecting to providers, failed peers: 12D3KooWQRJjSfnMNDBc9HM6dwMcFUBhsXwcUjHK2hk483ochCND)
