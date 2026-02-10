@@ -1,1 +1,1 @@
-Unable to retrieve content within timeout period: found 3 provider(s), attempted 3, but none were reachable (phase: connecting to providers, peers: 12D3KooWQRJjSfnMNDBc9HM6dwMcFUBhsXwcUjHK2hk483ochCND)
+Unable to retrieve content within timeout period: found 12 provider(s), attempted 12, but none were reachable (phase: connecting to providers, peers: 12D3KooWQRJjSfnMNDBc9HM6dwMcFUBhsXwcUjHK2hk483ochCND, 12D3KooWGs8mN9EB1pdZX1dXSFdfGhf81MjHw4Cz864j5ULvDVK8, 12D3KooWLbunmZY2YkJa39Qxk2LheAckmCwZbTXXbFextiiKDemN)
